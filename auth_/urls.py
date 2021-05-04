@@ -4,7 +4,7 @@ from rest_framework.routers import DefaultRouter
 from auth_ import views
 
 urlpatterns = [
-#    path('activations/activate/<str:uuid>/', views.activate),
+    #    path('activations/activate/<str:uuid>/', views.activate),
 ]
 
 router = DefaultRouter()

@@ -618,3 +618,499 @@ Traceback (most recent call last):
     send_mail(obj.id, constants.UPDATE_MESSAGE, settings.EMAIL_HOST_USER, to_users)
                                                                                   ^
 TabError: inconsistent use of tabs and spaces in indentation
+/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/platforms.py:797: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2021-05-04 10:11:37,372: INFO/MainProcess] Connected to amqp://myuser:**@127.0.0.1:5672/myvhost
+[2021-05-04 10:11:37,382: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-04 10:11:38,410: INFO/MainProcess] mingle: all alone
+[2021-05-04 10:11:38,444: WARNING/MainProcess] /home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/fixups/django.py:204: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+
+[2021-05-04 10:11:38,444: INFO/MainProcess] celery@beibarys ready.
+[2021-05-04 11:01:05,192: INFO/MainProcess] Received task: core.tasks.send_email[40a09b9f-e4f4-46c7-917b-563f704c0c11]  
+/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/platforms.py:797: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2021-05-04 11:01:05,207: ERROR/ForkPoolWorker-8] Task core.tasks.send_email[40a09b9f-e4f4-46c7-917b-563f704c0c11] raised unexpected: TypeError("send_email() got an unexpected keyword argument 'pk'")
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 405, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 697, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: send_email() got an unexpected keyword argument 'pk'
+[2021-05-04 11:23:51,026: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:00,976: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:10,977: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:20,977: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:30,974: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:40,977: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:24:50,978: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:00,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:10,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:20,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:30,977: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:40,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:25:50,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:00,980: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:10,981: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:20,978: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:30,981: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:40,981: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:26:50,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:27:00,981: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:27:10,979: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:31:48,709: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:31:58,693: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:32:08,693: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:43:18,607: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:44:00,008: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:45:00,053: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:45:10,925: INFO/MainProcess] Received task: core.tasks.send_email[d2fd3983-a215-407f-b7be-c933aff8f8db]  
+[2021-05-04 11:45:10,927: ERROR/ForkPoolWorker-8] Task core.tasks.send_email[d2fd3983-a215-407f-b7be-c933aff8f8db] raised unexpected: TypeError("send_email() got an unexpected keyword argument 'pk'")
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 405, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 697, in __protected_call__
+    return self.run(*args, **kwargs)
+TypeError: send_email() got an unexpected keyword argument 'pk'
+[2021-05-04 11:46:00,051: ERROR/MainProcess] Received unregistered task of type 'tracker.tasks.my_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/worker/consumer/consumer.py", line 555, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tracker.tasks.my_task'
+[2021-05-04 11:47:48,510: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-05-04 11:48:29,440: INFO/MainProcess] Received task: core.tasks.send_email[df16d7a8-86d1-410f-bce4-e64a7c373c2b]  
+[2021-05-04 11:48:29,442: ERROR/ForkPoolWorker-8] Task core.tasks.send_email[df16d7a8-86d1-410f-bce4-e64a7c373c2b] raised unexpected: TypeError("send_email() got an unexpected keyword argument 'pk'")
+Traceback (most recent call last):
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 405, in trace_task
+    store_result(
+  File "/home/beibarys/development/tracker/venv/lib/python3.7/site-packages/celery/app/trace.py", line 697, in __protected_call__
+TypeError: send_email() got an unexpected keyword argument 'pk'

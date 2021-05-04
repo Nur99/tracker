@@ -15,8 +15,8 @@ from core.tasks import send_email
 
 import logging
 
-
 logger = logging.getLogger(__name__)
+
 
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
@@ -27,6 +27,6 @@ class TaskViewSet(viewsets.ModelViewSet):
     def partial_update(self, request, *args, **kwargs):
         super(TaskViewSet, self).partial_update(request, *args, **kwargs)
         send_email.delay(
-        	obj=self.get_object()
-        	)
+            pk=self.get_object().id
+        )
         return Response(TaskSerializer(self.get_object()).data)

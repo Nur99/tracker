@@ -81,7 +81,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tracker.wsgi.application'
 
 
-CELERY_BROKER_URL = 'amqp://localhost'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -164,3 +163,4 @@ FROM_EMAIL = os.getenv('FROM_EMAIL')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
 EMAIL_USE_TLS = True
 CELERY_BROKER_URL = 'amqp://myuser:mypassword@localhost:5672/myvhost'
+CELERY_TASK_SERIALIZER = 'json'

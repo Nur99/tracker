@@ -10,5 +10,5 @@ router.register(r'task', views.TaskViewSet)
 urlpatterns = router.urls
 
 urlpatterns += [
-#    path('public_offer/', views.PublicOfferView.as_view()),
+    #    path('public_offer/', views.PublicOfferView.as_view()),
 ]
