@@ -1,0 +1,620 @@
+xTraceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from tasks import send_email
+ModuleNotFoundError: No module named 'tasks'
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from tasks import send_email
+ModuleNotFoundError: No module named 'tasks'
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from tasks import send_email
+ModuleNotFoundError: No module named 'tasks'
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from tasks import send_email
+ModuleNotFoundError: No module named 'tasks'
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from core.tasks import send_email
+  File "/home/acer/projects/tracker/core/tasks.py", line 9
+    send_mail(obj.id, constants.UPDATE_MESSAGE, settings.EMAIL_HOST_USER, to_users)
+                                                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from core.tasks import send_email
+  File "/home/acer/projects/tracker/core/tasks.py", line 9
+    send_mail(obj.id, constants.UPDATE_MESSAGE, settings.EMAIL_HOST_USER, to_users)
+                                                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from core.tasks import send_email
+  File "/home/acer/projects/tracker/core/tasks.py", line 9
+    send_mail(obj.id, constants.UPDATE_MESSAGE, settings.EMAIL_HOST_USER, to_users)
+                                                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+Traceback (most recent call last):
+  File "/home/acer/environments/test2/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/__main__.py", line 15, in main
+    sys.exit(_main())
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/celery.py", line 213, in main
+    return celery(auto_envvar_prefix="CELERY")
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/base.py", line 132, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/bin/worker.py", line 326, in worker
+    **kwargs)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/worker/worker.py", line 94, in __init__
+    self.app.loader.init_worker()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 111, in init_worker
+    self.import_default_modules()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/loaders/base.py", line 105, in import_default_modules
+    raise response
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/utils/dispatch/signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/celery/fixups/django.py", line 121, in validate_models
+    run_checks()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/tracker/urls.py", line 24, in <module>
+    path('core/', include('core.urls')),
+  File "/home/acer/environments/test2/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/acer/projects/tracker/core/urls.py", line 2, in <module>
+    from core import views
+  File "/home/acer/projects/tracker/core/views.py", line 14, in <module>
+    from core.tasks import send_email
+  File "/home/acer/projects/tracker/core/tasks.py", line 9
+    send_mail(obj.id, constants.UPDATE_MESSAGE, settings.EMAIL_HOST_USER, to_users)
+                                                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
