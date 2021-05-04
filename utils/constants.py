@@ -13,3 +13,5 @@ STATUSES = [
 ]
 
 UPDATE_MESSAGE = 'Look to this task. There are some updates'
+TASK_EXPIRED_MESSAGE = 'Your finish time is expired. You should restructure your task.'
+

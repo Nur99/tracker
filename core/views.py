@@ -26,7 +26,6 @@ class TaskViewSet(viewsets.ModelViewSet):
 
     def partial_update(self, request, *args, **kwargs):
         super(TaskViewSet, self).partial_update(request, *args, **kwargs)
-        send_email.delay(
-            pk=self.get_object().id
-        )
+        send_email(ph=self.get_object().id)
+        #send_email.delay(pk=self.get_object().id)
         return Response(TaskSerializer(self.get_object()).data)
