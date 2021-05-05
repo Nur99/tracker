@@ -14,5 +14,8 @@ def send_email(pk):
 
 
 @app.task
-def my_task():
-    print(12)
+def expired_tasks():
+    for task in Task.objects.all():
+    	if(task.finish_date > timezone.now()):	
+		    to_users = [task.executor.email, ]
+		    send_mail(pk, constants.TASK_EXPIRED_MESSAGE, settings.EMAIL_HOST_USER, to_users)
